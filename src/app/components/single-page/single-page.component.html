@@ -1,0 +1,28 @@
+
+<div class="container ">
+    
+    <ng-container>
+    <div class="box col-md-10">
+        <table>
+            <tr>
+                <td>
+                    <div class="card">
+                        <img src="{{singleProduct?.image}}" style="width: 500px;height: 500px;"alt="">
+                    </div>
+                </td>
+                <td>
+                    <div class="knowledge">
+                        <h5 class="itemdata" style="font-size: 24px;">{{singleProduct?.title}}</h5>
+                        <p class="itemdata">{{singleProduct?.description}}</p>
+                        <p style="font-size:24px;"><strong>Price: </strong>${{singleProduct?.price}}</p>
+                       
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+    </ng-container>
+    
+</div>

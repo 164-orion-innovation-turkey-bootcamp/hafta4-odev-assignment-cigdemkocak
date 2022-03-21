@@ -1,0 +1,29 @@
+.form-control{
+    margin-left: 85px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 600px;
+    border-radius: 30px;
+
+}
+strong{
+    font-size:30px;
+    margin-top:30px;
+    margin-left:100px;
+    margin-bottom:30px ;
+
+}
+
+.box{
+    margin-right: 30px;
+}
+/*
+.search-icon{
+    z-index: 10;
+    position: absolute;
+    right:62%;
+    top:31%;
+    color:blue;
+
+}
+*/

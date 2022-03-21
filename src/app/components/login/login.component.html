@@ -1,0 +1,34 @@
+ <!--Login sayfası Html kodları-->
+ <div class="container">
+    <div class="col">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h2>Login</h2>
+                </div>
+                <div >
+                    <form>
+                        <form [formGroup] = "loginForm" (ngSubmit) ="login()">
+                            <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Email address</label>
+                              <input formControlName= "email" type="text" class="form-control" id="float-input" aria-describedby="emailHelp" pInputtext>
+                              <div id="emailHelp" class="form-text"></div>
+                              <small class="text-danger" *ngIf="loginForm.get('email') && !loginForm.get('email')!.valid && loginForm.get('email')!.touched">*Email is required!</small>
+                            </div>
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Password</label>
+                              <input formControlName= "password" type="password" class="form-control" id="exampleInputPassword1">
+                              <small class="text-danger" *ngIf="loginForm.get('password') && !loginForm.get('password')!.valid && loginForm.get('password')!.touched">*Password is required!</small>
+                            </div>
+
+                            <button type="submit" [disabled] = "!loginForm.valid" class="btn btn-primary mb-2">Login</button>
+                          </form>
+                          <a style="margin-top: 0px; color:black" routerLink="/signup">New user? Click to Sign Up! </a>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

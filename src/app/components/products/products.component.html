@@ -1,0 +1,42 @@
+<div class="cart-top container-fluid bg-black">
+    <div class="container d-flex " >
+        <div class="items">
+            <a (click)="filter('')">
+                <h4> All Products</h4>
+            </a>
+        </div>
+        <div class="items">
+            <a (click)="filter('bouquet')">
+                <h4>Bouquet</h4>
+            </a>
+        </div>
+        <div class="items">
+            <a (click)="filter('vase')">
+                <h4>Vase</h4>
+            </a>
+        </div>
+        <div class="items">
+            <a (click)="filter('flowerpot')">
+                <h4>Flowerpot</h4>
+            </a>
+        </div>
+        <button class="btn btn-black" style="position:absolute; color:white; font-size:25px; right: 100px; bottom:25px;" routerLink="/login">Logout</button>
+    </div>
+    
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey : 'title'">
+        <div class="card col-md-3" >
+            <img src="{{item.image}}"alt="" (click)="productView(item.id)">
+            <h5 class="itemdata">{{item.title}}</h5>
+            <p class="itemdata">{{item.description}}</p>
+            <p style="font-size: 20px;"><strong>Price: </strong>${{item.price}}</p>
+           <!--<p>{{item.category}}</p>--> 
+            
+            <button class="btn bg-black" (click)="addToCard(item)">ADD TO BAG</button>
+        </div>
+        </ng-container>
+    </div>
+</div>
